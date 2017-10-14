@@ -210,9 +210,9 @@ define(function() {
 	},
 
 	{
-		label: 'Nova Planet',
-		matches: ['*://www.novaplanet.com/radionova/player'],
-		js: ['connectors/novaplanet.js'],
+		label: 'Radio Nova',
+		matches: ['*://www.nova.fr/*'],
+		js: ['connectors/nova.js'],
 	},
 
 	{
@@ -608,12 +608,6 @@ define(function() {
 	},
 
 	{
-		label: 'Dash Radio',
-		matches: ['*://dashradio.com/*'],
-		js: ['connectors/dashradio.js'],
-	},
-
-	{
 		label: 'post-player',
 		matches: ['*://post-player.org/*'],
 		js: ['connectors/post-player.js'],
@@ -743,10 +737,17 @@ define(function() {
 
 	{
 		label: 'Youtubify',
-		matches: ['*://youtubify.vebto.com/*'],
+		matches: ['*://youtubify.vebto.com/*', '*://bemusic.vebto.com/*'],
 		js: ['connectors/bemusic.js'],
 	},
-
+	
+	{
+		label: 'Ma5onic Music Player',
+		matches: ['*://ma5onic.com/PlayerApp/*', '*://player.ma5onic.com/*',
+				  '*://www.ma5onic.com/PlayerApp/*', '*://www.player.ma5onic.com/*'],
+		js: ['connectors/bemusic.js'],
+	},
+	
 	{
 		label: 'Paste Radio',
 		matches: ['*://www.pastemagazine.com/radio*'],
@@ -1001,7 +1002,11 @@ define(function() {
 
 	{
 		label: 'Kuwo Music',
-		matches: ['*://kuwo.cn/*', '*://www.kuwo.cn/*'],
+		matches: [
+			'*://kuwo.cn/*',
+			'*://www.kuwo.cn/*',
+			'*://m.kuwo.cn/*'
+		],
 		js: ['connectors/kuwo.js'],
 		version: 2
 	}, {
@@ -1086,5 +1091,39 @@ define(function() {
 		label: 'Patari',
 		matches: ['*://patari.pk/*'],
 		js: ['connectors/patari.js']
+	}, {
+		label: 'JetSetRadio Live',
+		matches: ['*://jetsetradio.live/*', '*://jetsetradio.live'],
+		js: ['connectors/jetsetradio.live.js']
+	}, {
+		label: 'FIP',
+		matches: ['*://www.fipradio.fr/*'],
+		js: ['connectors/fipradio.js']
+	}, {
+		label: 'RemixRotation',
+		matches: ['*://remixrotation.com/*'],
+		js: ['connectors/remixrotation.js']
+
+	}, {
+		label: 'WFMU',
+		matches: ['*://wfmu.org/audioplayer/*'],
+		js: ['connectors/wfmu.js'],
+	}, {
+		label: 'SiriusXM',
+		matches: ['*://player.siriusxm.com/*'],
+		js: ['connectors/siriusxm-player.js']
+	}, {
+		label: '1ting',
+		matches: [
+			'*://www.1ting.com/player/*', '*://www.1ting.com/p_*',
+			'*://www.1ting.com/album*', '*://www.1ting.com/rand.php*',
+			'*://www.1ting.com/day/*',
+			'*://h5.1ting.com/*'
+		],
+		js: ['connectors/1ting.js']
+	}, {
+		label: 'Kugou',
+		matches: ['*://www.kugou.com/song/*'],
+		js: ['connectors/kugou.js']
 	}];
 });
